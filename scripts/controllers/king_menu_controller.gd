@@ -36,8 +36,7 @@ func _back_button_pressed():
     self.root.menu.king_button.grab_focus()
 
 func _start_button_pressed():
-	# starts the game
-	pass
+	self.start_game()
 
 func show_king_menu():
 	self.start_button.grab_focus()
@@ -47,3 +46,9 @@ func hide_king_menu():
     self.root.menu.refresh_buttons_labels()
     self.king_menu.hide()
     self.root.bag.controllers.menu_controller.show_control_nodes()
+
+func start_game():
+	self.root.load_map("workshop", # TODO - this is wrong, skirmish maps don't do this
+			"king_mode", false)
+	self.hide_king_menu()
+	self.root.toggle_menu()
