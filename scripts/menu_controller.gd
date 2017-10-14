@@ -193,7 +193,8 @@ func _workshop_button_pressed():
     self.root.sound_controller.play('menu')
     self.enter_workshop()
 func _king_button_pressed():
-    self.root.sound_controller.play('hurt')
+    self.root.sound_controller.play('menu')
+    self.show_king_menu()
 func _play_button_pressed():
     self.root.sound_controller.play('menu')
     self.show_maps_menu()
@@ -296,6 +297,11 @@ func show_campaign_menu():
     self.root.bag.controllers.campaign_menu_controller.show_campaign_menu()
     self.hide_control_nodes()
     self.root.bag.controllers.campaign_menu_controller.start_button.grab_focus()
+
+func show_king_menu():
+	self.root.bag.controllers.king_menu_controller.show_king_menu()
+	self.hide_control_nodes()
+	self.root.bag.controllers.king_menu_controller.start_button.grab_focus()
 
 func show_maps_menu():
     self.hide_control_nodes()
