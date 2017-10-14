@@ -15,6 +15,10 @@ var default_custom_maps = [
         'name' : 'hearth_of_wild',
         'file' : preload('res://maps/custom/hearth_of_wild.gd').new()
     },
+	{
+		'name': 'king_mode',
+		'file': preload('res://maps/custom/king_mode.gd').new()
+	},
     {
         'name' : 'king_of_the_hill',
         'file' : preload('res://maps/custom/king_of_the_hill.gd').new()
