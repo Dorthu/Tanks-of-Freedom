@@ -38,6 +38,7 @@ var maps_sub_menu = preload("res://gui/menu_maps.xscn").instance()
 var maps_sub_menu_anchor
 var maps_close_button
 var workshop_button
+var king_button
 var workshop
 
 var overscan_group
@@ -85,6 +86,7 @@ func _ready():
     quit_button = get_node("top/center/quit")
     demo_button = get_node("top/center/demo")
     online_button = get_node("bottom/center/online")
+    king_button = get_node("bottom/center/king")
 
     if not Globals.get('tof/online'):
         online_button.hide()
@@ -153,6 +155,7 @@ func _ready():
     workshop_button.connect("pressed", self, "_workshop_button_pressed")
     play_button.connect("pressed", self, "_play_button_pressed")
     online_button.connect("pressed", self, "_online_button_pressed")
+    king_button.connect("pressed", self, "_king_button_pressed")
 
     sound_toggle_button.connect("pressed", self, "_toggle_sound_button_pressed")
     music_toggle_button.connect("pressed", self, "_toggle_music_button_pressed")
@@ -189,6 +192,8 @@ func _campaign_button_pressed():
 func _workshop_button_pressed():
     self.root.sound_controller.play('menu')
     self.enter_workshop()
+func _king_button_pressed():
+    self.root.sound_controller.play('hurt')
 func _play_button_pressed():
     self.root.sound_controller.play('menu')
     self.show_maps_menu()

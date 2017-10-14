@@ -67,6 +67,7 @@
 "LABEL_LOCAL","LOCAL","LOKAL","LOCAL","ローカル","LOKALNE","ЛОКАЛЬНЫЙ"
 "LABEL_MAIN_MENU","MAIN MENU","HAUPTMENU","MENU","メインメニュー","MENU GŁÓWNE","ГЛАВНОЕ МЕНЮ"
 "LABEL_MAP EDITOR","MAP EDITOR","KARTEN EDITOR","ÉDITEUR","マップエディター","EDYTOR MAP","РЕДАКТОР КАРТ"
+"LABEL_KING", "KING OF THE HILL", "", "", "", "", "", ""
 "LABEL_MAPS","MAPS","KARTEN","CARTE","マップ","MAPY","КАРТ"
 "LABEL_MAPS_CREATED","MAPS CREATED","KARTEN ERSTELLT","CARTES CRÉÉES","マップを作成しました","STWORZONYCH MAP","СДЕЛАНО КАРТ"
 "LABEL_MAP_CODE","MAP: ","KARTE: ","CARTE : ","マップ: ","MAPA: ","КАРТА: "

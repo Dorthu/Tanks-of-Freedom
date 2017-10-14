@@ -630,7 +630,6 @@ max_lines_visible = -1
 
 [node name="bottom" type="CenterContainer" parent="."]
 
-editor/display_folded = true
 anchor/top = 1
 anchor/right = 1
 anchor/bottom = 1
@@ -650,14 +649,13 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 640.0
+margin/left = 618.0
 margin/top = 0.0
-margin/right = 640.0
+margin/right = 618.0
 margin/bottom = 0.0
 
 [node name="menu_background" type="Control" parent="bottom/center"]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
@@ -675,9 +673,9 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -288.0
+margin/left = -367.0
 margin/top = -72.0
-margin/right = -240.0
+margin/right = -357.0
 margin/bottom = 32.0
 texture = ExtResource( 14 )
 patch_margin/left = 24
@@ -691,9 +689,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -128.0
+margin/left = -205.0
 margin/top = -80.0
-margin/right = 16.0
+margin/right = -61.0
 margin/bottom = -32.0
 toggle_mode = false
 enabled_focus_mode = 2
@@ -730,9 +728,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 128.0
+margin/left = 243.0
 margin/top = -80.0
-margin/right = 272.0
+margin/right = 387.0
 margin/bottom = -32.0
 toggle_mode = false
 enabled_focus_mode = 2
@@ -763,15 +761,54 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
+[node name="king" type="TextureButton" parent="bottom/center"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 50.0
+margin/top = -80.0
+margin/right = 239.0
+margin/bottom = -32.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 17 )
+textures/pressed = ExtResource( 18 )
+textures/hover = ExtResource( 19 )
+textures/disabled = ExtResource( 13 )
+textures/focused = ExtResource( 20 )
+params/resize_mode = 1
+params/scale = Vector2( 3, 3 )
+params/stretch_mode = 1
+
+[node name="Label" type="Label" parent="bottom/center/king"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -1.0
+margin/top = 16.0
+margin/right = 159.0
+margin/bottom = 34.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "LABEL_KING"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
 [node name="start_campaign" type="TextureButton" parent="bottom/center"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -280.0
+margin/left = -357.0
 margin/top = -80.0
-margin/right = -136.0
+margin/right = -213.0
 margin/bottom = -32.0
 toggle_mode = false
 enabled_focus_mode = 2
@@ -809,9 +846,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 theme/theme = ExtResource( 21 )
-margin/left = -280.0
+margin/left = -355.0
 margin/top = -28.0
-margin/right = -130.0
+margin/right = -205.0
 margin/bottom = -12.0
 text = "COMPLETED: 2/12"
 align = 1
@@ -826,9 +863,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 0
 theme/theme = ExtResource( 21 )
-margin/left = 136.0
+margin/left = 231.0
 margin/top = -29.0
-margin/right = 286.0
+margin/right = 381.0
 margin/bottom = -13.0
 text = "MAPS CREATED: 3"
 align = 1
@@ -842,9 +879,9 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 24.0
+margin/left = -53.0
 margin/top = -80.0
-margin/right = 120.0
+margin/right = 43.0
 margin/bottom = -32.0
 toggle_mode = false
 enabled_focus_mode = 2
