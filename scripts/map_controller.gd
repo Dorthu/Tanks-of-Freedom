@@ -69,7 +69,8 @@ var map_buildings = [
     preload('res://buildings/factory.xscn'),
     preload('res://buildings/airport.xscn'),
     preload('res://buildings/tower.xscn'),
-    preload('res://buildings/fence.xscn')
+    preload('res://buildings/fence.xscn'),
+    preload('res://buildings/objective.xscn')
 ]
 
 var map_units = [
@@ -288,6 +289,9 @@ func generate_map():
             if terrain_cell == self.tileset.TERRAIN_TOWER_FREE: # tower
                 temp = map_buildings[5].instance()
                 terrain_under_building = 10
+            if terrain_cell == self.tileset.TERRAIN_OBJECTIVE_FREE: # objective
+                temp = map_buildings[7].instance()
+                terrain_under_building = 10
             if terrain_cell == self.tileset.TERRAIN_BARRACKS_RED: # barrack
                 temp = map_buildings[2].instance()
                 temp.player = 1
@@ -304,6 +308,10 @@ func generate_map():
                 temp = map_buildings[5].instance()
                 temp.player = 1
                 terrain_under_building = 12
+            if terrain_cell == self.tileset.TERRAIN_OBJECTIVE_RED: # objective
+                temp = map_buildings[7].instance()
+                temp.player = 1
+                terrain_under_building = 12
             if terrain_cell == self.tileset.TERRAIN_BARRACKS_BLUE: # barrack
                 temp = map_buildings[2].instance()
                 temp.player = 0
@@ -318,6 +326,10 @@ func generate_map():
                 terrain_under_building = 11
             if terrain_cell == self.tileset.TERRAIN_TOWER_BLUE: # tower
                 temp = map_buildings[5].instance()
+                temp.player = 0
+                terrain_under_building = 11
+            if terrain_cell == self.tileset.TERRAIN_OBJECTIVE_BLUE: # objective
+                temp = map_buildings[7].instance()
                 temp.player = 0
                 terrain_under_building = 11
             if terrain_cell == self.tileset.TERRAIN_FENCE: # fence

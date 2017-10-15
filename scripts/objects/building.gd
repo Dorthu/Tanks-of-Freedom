@@ -24,6 +24,7 @@ var TYPE_BARRACKS = 1
 var TYPE_FACTORY = 2
 var TYPE_AIRPORT = 3
 var TYPE_TOWER = 4
+var TYPE_OBJECTIVE = 5
 
 const HAS_SAME_TYPE_OF_UNIT_MODIFIER = 3
 
@@ -101,6 +102,8 @@ func get_building_name():
 		return "AIRPORT"
 	if type == TYPE_TOWER:
 		return "GSM TOWER"
+	if type == TYPE_OBJECTIVE:
+		return "OBJECTIVE"
 
 func get_cost():
 	return get_required_ap()
@@ -117,7 +120,7 @@ func clear_floating_damage():
 	floating_ap.queue_free()
 
 func can_spawn_units():
-    if self.type == 4:
+    if self.type == TYPE_TOWER or self.type == TYPE_OBJECTIVE:
         return false
 
     return true
