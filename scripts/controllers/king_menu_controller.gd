@@ -14,7 +14,9 @@ func init_root(root_node):
 	self.attach_king_menu()
 
 	self.notice_header.set_text("UNDER CONSTRUCTION")
-	self.notice_body.set_text("This game mode is currently in development, and may not work even a little bit!")
+	self.notice_body.set_text("Your mission is to capture the center objective.  At the end of each enemy turn, if you " +
+		"control the objects, you get a point.  The game ends at X points or after Y turns. " +
+		"This game mode is only supported against another human, and only locally.")
 
 
 func bind_king_menu():

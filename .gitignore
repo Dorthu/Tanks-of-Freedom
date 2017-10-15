@@ -10,3 +10,5 @@ export.cfg
 *.keystore
 *export_android.cfg
 logs/log.txt
+
+.DS_store

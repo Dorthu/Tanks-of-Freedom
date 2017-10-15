@@ -114,9 +114,9 @@
 				<int> 24 </int>
 				<int> 0 </int>
 				<real> -240 </real>
-				<real> -120 </real>
+				<real> -154 </real>
 				<real> 239 </real>
-				<real> 33 </real>
+				<real> -1 </real>
 				<string> "Sample sentence about this&#000a;awesome campaign &#000a;full off zasadzkas." </string>
 				<real> 1 </real>
 				<int> -1 </int>
@@ -158,7 +158,7 @@
 				<real> -72 </real>
 				<real> -152 </real>
 				<real> -24 </real>
-				<string> "&gt; BACK" </string>
+				<string> "BACK" </string>
 			</array>
 			<string> "version" </string>
 			<int> 2 </int>
