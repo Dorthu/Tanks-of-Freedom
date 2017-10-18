@@ -7,6 +7,7 @@ var hud_panel_anchor_bottom_left
 var hud_panel_anchor_bottom_middle
 var hud_panel_anchor_bottom_right
 var hud_panel_anchor_top_right
+var hud_panel_anchor_left_center
 
 var hud_message_card
 var hud_message_card_controller
@@ -154,13 +155,14 @@ func attach_hud_panel():
     self.hud_panel_anchor_bottom_middle = self.hud_root.get_node('bottom_center/center')
     self.hud_panel_anchor_bottom_right = self.hud_root.get_node('bottom_right')
     self.hud_panel_anchor_top_right = self.hud_root.get_node('top_right_panel')
+    self.hud_panel_anchor_left_center = self.hud_root.get_node('left_center')
 
-    self.root.bag.controllers.hud_panel_controller.bind_panels(self.hud_panel_anchor_bottom_middle, self.hud_panel_anchor_bottom_right, self.hud_panel_anchor_bottom_left, self.hud_panel_anchor_top_right)
+    self.root.bag.controllers.hud_panel_controller.bind_panels(self.hud_panel_anchor_bottom_middle, self.hud_panel_anchor_bottom_right, self.hud_panel_anchor_bottom_left, self.hud_panel_anchor_top_right, self.hud_panel_anchor_left_center)
 
     self.root.bag.controllers.hud_panel_controller.info_panel.bind_end_turn(self, '_end_turn_button_pressed')
 
 func detach_hud_panel():
-    self.root.bag.controllers.hud_panel_controller.unbind_panels(self.hud_panel_anchor_bottom_middle, self.hud_panel_anchor_bottom_right, self.hud_panel_anchor_bottom_left, self.hud_panel_anchor_top_right)
+    self.root.bag.controllers.hud_panel_controller.unbind_panels(self.hud_panel_anchor_bottom_middle, self.hud_panel_anchor_bottom_right, self.hud_panel_anchor_bottom_left, self.hud_panel_anchor_top_right, self.hud_panel_anchor_left_center)
 
 func enable_back_to_workshop():
     self.back_to_workshop = true
@@ -177,6 +179,9 @@ func show_unit_card(unit, player):
 
 func update_unit_card(unit):
     self.root.bag.controllers.hud_panel_controller.unit_panel.update_hud()
+
+func update_scores(blue_score, red_score):
+	self.root.bag.controllers.hud_panel_controller.update_scores(blue_score, red_score)
 
 func clear_unit_card():
     self.root.bag.controllers.hud_panel_controller.hide_unit_panel()

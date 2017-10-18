@@ -50,6 +50,8 @@ func hide_king_menu():
     self.root.bag.controllers.menu_controller.show_control_nodes()
 
 func start_game():
+	self.root.bag.root.settings['turns_cap'] = 20 # TODO - tweak turn cap
+	# TODO - do we need to unset turns_cap after the game?
 	self.root.load_map("workshop", # TODO - this is wrong, skirmish maps don't do this
 			"king_mode", false)
 	self.hide_king_menu()

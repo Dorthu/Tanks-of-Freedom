@@ -127,6 +127,8 @@ func can_spawn_units():
 
 func _ready():
 	add_to_group("buildings")
+	if type == TYPE_OBJECTIVE:
+		add_to_group("objectives")
 	if get_node("/root/game"):
 		current_map = get_node("/root/game").current_map_terrain
 	flag = get_node('flag')
