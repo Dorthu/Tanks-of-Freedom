@@ -1,0 +1,122 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://assets/gui/dialogs/menu9_dark@2x.png" type="Texture" id=1]
+[ext_resource path="res://assets/gui/dialogs/menu9@2x.png" type="Texture" id=2]
+[ext_resource path="res://gui/font_32.tres" type="Theme" id=3]
+[ext_resource path="res://assets/units/blueprint_units.png" type="Texture" id=4]
+
+[node name="score_panel" type="Control"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 0.0
+
+[node name="background_top" type="Patch9Frame" parent="."]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -69.0
+margin/top = -103.0
+margin/right = -70.0
+margin/bottom = 79.0
+texture = ExtResource( 1 )
+patch_margin/left = 24
+patch_margin/top = 12
+patch_margin/right = 24
+patch_margin/bottom = 12
+
+[node name="background_bottom" type="Patch9Frame" parent="."]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -69.0
+margin/top = -80.0
+margin/right = -70.0
+margin/bottom = 1.0
+texture = ExtResource( 2 )
+patch_margin/left = 24
+patch_margin/top = 24
+patch_margin/right = 24
+patch_margin/bottom = 24
+
+[node name="blue_score" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+theme/theme = ExtResource( 3 )
+margin/left = -62.0
+margin/top = -40.0
+margin/right = 0.0
+margin/bottom = -6.0
+text = "999"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="red_score" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+theme/theme = ExtResource( 3 )
+margin/left = 3.0
+margin/top = -40.0
+margin/right = 65.0
+margin/bottom = -6.0
+text = "999"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="title" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -63.0
+margin/top = -98.0
+margin/right = 66.0
+margin/bottom = -84.0
+text = "LABEL_SCORE"
+align = 1
+valign = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="blue_team" type="Sprite" parent="."]
+
+transform/pos = Vector2( -31.0112, -55.6651 )
+texture = ExtResource( 4 )
+region = true
+region_rect = Rect2( 0, 0, 32, 32 )
+
+[node name="red_team" type="Sprite" parent="."]
+
+transform/pos = Vector2( 34.359, -54.9693 )
+texture = ExtResource( 4 )
+region = true
+region_rect = Rect2( 96, 0, 32, 32 )
+
+

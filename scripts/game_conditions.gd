@@ -15,5 +15,12 @@ func check_win_conditions(field):
         self.action_controller.end_game(self.action_controller.current_player)
     return 1
 
+func update_scores(current_player):
+	var objectives = self.action_controller.root_tree.get_nodes_in_group("objectives")
 
+	if objectives.empty():
+		return
 
+	for objective in objectives:
+		if objective.player > -1 and objective.player != current_player:
+			self.action_controller.scores[objective.player] += 1

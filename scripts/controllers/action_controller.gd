@@ -13,6 +13,7 @@ var pathfinding
 var demo_timer
 var positions
 var actual_movement_tiles = {}
+var scores = [0, 0]
 
 var current_player = 0
 var player_ap = [0,0]
@@ -51,6 +52,7 @@ func reset():
     self.title = null
     self.camera = null
     self.game_ended = false
+    self.scores = [0, 0]
 
 func init_root(root, map, hud):
     self.reset()
@@ -298,6 +300,7 @@ func end_turn():
 
 func local_end_turn():
     self.stats_set_time()
+    self.root_node.bag.game_conditions.update_scores(self.current_player)
     self.root_node.bag.game_conditions.check_turn_cap()
     if self.game_ended:
         return
@@ -316,6 +319,7 @@ func local_end_turn():
             'details' : {'turn' : self.turn - 1}
         })
     hud_controller.set_turn(turn)
+    hud_controller.update_scores(self.scores[0], self.scores[1])
 
     #gather stats
     self.root_node.bag.battle_stats.add_domination(self.current_player, self.positions.get_player_buildings(self.current_player).size())
