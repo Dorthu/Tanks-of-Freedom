@@ -17,15 +17,20 @@ var info_panel_map_name
 var zoom_panel_zoom_in
 var zoom_panel_zoom_out
 
+var score_panel
+var score_label_blue
+var score_label_red
+
 const MAP_NAME_LENGTH = 17
 
 func _init_bag(bag):
     self.bag = bag
 
-func bind(end_turn_panel_scene, info_panel_scene, zoom_panel_scene):
+func bind(end_turn_panel_scene, info_panel_scene, zoom_panel_scene, score_panel_scene):
     self.turn_info = info_panel_scene
     self.end_turn = end_turn_panel_scene
     self.zoom_panel = zoom_panel_scene
+    self.score_panel = score_panel_scene
     self.info_panel_turn = self.end_turn.get_node('turn')
     self.info_panel_end_button = self.end_turn.get_node('end_turn_button')
     self.info_panel_blink_label = self.end_turn.get_node('end_turn_text')
@@ -34,6 +39,8 @@ func bind(end_turn_panel_scene, info_panel_scene, zoom_panel_scene):
     self.info_panel_ap = self.turn_info.get_node('ap')
     self.info_panel_pap = self.turn_info.get_node('pap')
     self.info_panel_map_name = self.turn_info.get_node('map_name')
+    self.score_label_blue = self.score_panel.get_node('blue_score')
+    self.score_label_red = self.score_panel.get_node('red_score')
 
     self.zoom_panel_zoom_in = self.zoom_panel.get_node('zoom_in')
     self.zoom_panel_zoom_in.connect('pressed', self.bag.camera, 'camera_zoom_in')
@@ -76,6 +83,10 @@ func set_turn(turn, max_turn=null):
     if max_turn != null && max_turn > 0:
         display = display + '/' + str(max_turn)
     info_panel_turn.set_text(display)
+
+func update_scores(blue_score, red_score):
+    self.score_label_blue.set_text(str(blue_score))
+    self.score_label_red.set_text(str(red_score))
 
 func end_button_pressed():
     self.end_button_disable()
