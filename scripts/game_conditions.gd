@@ -2,6 +2,8 @@ extends "res://scripts/bag_aware.gd"
 
 var action_controller
 
+const OBJECTIVE_MODE_WINNING_SCORE = 5 # TODO hardcoded cap
+
 func _initialize():
     self.action_controller = self.bag.controllers.action_controller
 
@@ -29,3 +31,11 @@ func update_scores(current_player):
 	for objective in objectives:
 		if objective.player > -1 and objective.player != current_player:
 			self.action_controller.scores[objective.player] += 1
+
+func check_scores():
+	var scores = self.action_controller.scores
+
+	if scores[0] >= OBJECTIVE_MODE_WINNING_SCORE:
+		self.action_controller.end_game(0)
+	elif scores[1] >= OBJECTIVE_MODE_WINNING_SCORE:
+		self.action_controller.end_game(1)
