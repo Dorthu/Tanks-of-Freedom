@@ -60,6 +60,12 @@ func hide():
     self.end_turn.hide()
     self.zoom_panel.hide()
 
+func show_score_panel():
+	self.score_panel.show()
+
+func hide_score_panel():
+	self.score_panel.hide()
+
 func reset():
     self.end_button_enable()
     self.set_turn(1)

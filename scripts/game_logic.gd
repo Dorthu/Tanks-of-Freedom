@@ -236,6 +236,11 @@ func load_map(template_name, workshop_file_name = false, load_saved_state = fals
         else:
             action_controller.switch_to_player(self.bag.campaign.get_map_player(template_name), false)
 
+    if self.bag.game_conditions.is_king_mode():
+        self.bag.controllers.hud_panel_controller.show_scores()
+    else:
+        self.bag.controllers.hud_panel_controller.hide_scores()
+
     hud_controller.show_map()
     self.selector.init(self)
     self.is_map_loaded = true

@@ -80,5 +80,11 @@ func reset():
 	self.info_panel.reset()
 	self.clear_panels()
 
+func show_scores():
+	self.info_panel.show_score_panel()
+
+func hide_scores():
+	self.info_panel.hide_score_panel()
+
 func update_scores(blue_score, red_score):
 	self.info_panel.update_scores(blue_score, red_score)
