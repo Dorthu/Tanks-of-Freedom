@@ -301,6 +301,7 @@ func end_turn():
 func local_end_turn():
     self.stats_set_time()
     self.root_node.bag.game_conditions.update_scores(self.current_player)
+    self.root_node.bag.game_conditions.check_scores()
     self.root_node.bag.game_conditions.check_turn_cap()
     if self.game_ended:
         return
