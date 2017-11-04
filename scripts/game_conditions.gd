@@ -5,6 +5,11 @@ var action_controller
 func _initialize():
     self.action_controller = self.bag.controllers.action_controller
 
+func is_king_mode():
+	var objectives = self.action_controller.root_tree.get_nodes_in_group("objectives")
+
+	return not objectives.empty()
+
 func check_turn_cap():
     if self.bag.root.settings['turns_cap'] > 0:
         if self.action_controller.turn >= self.bag.root.settings['turns_cap']:
