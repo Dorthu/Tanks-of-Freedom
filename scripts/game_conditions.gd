@@ -7,7 +7,7 @@ const OBJECTIVE_MODE_WINNING_SCORE = 5 # TODO hardcoded cap
 func _initialize():
     self.action_controller = self.bag.controllers.action_controller
 
-func is_king_mode():
+func has_objectives():
 	var objectives = self.action_controller.root_tree.get_nodes_in_group("objectives")
 
 	return not objectives.empty()

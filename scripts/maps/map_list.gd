@@ -16,8 +16,8 @@ var default_custom_maps = [
         'file' : preload('res://maps/custom/hearth_of_wild.gd').new()
     },
 	{
-		'name': 'king_mode',
-		'file': preload('res://maps/custom/king_mode.gd').new()
+		'name': 'objectives',
+		'file': preload('res://maps/custom/objectives.gd').new()
 	},
     {
         'name' : 'king_of_the_hill',
