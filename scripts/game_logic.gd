@@ -238,6 +238,7 @@ func load_map(template_name, workshop_file_name = false, load_saved_state = fals
 
     if self.bag.game_conditions.is_king_mode():
         self.bag.controllers.hud_panel_controller.show_scores()
+        self.bag.controllers.hud_panel_controller.update_scores(0,0) # reset display
     else:
         self.bag.controllers.hud_panel_controller.hide_scores()
 
